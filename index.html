@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practical Todos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="favicon" rel="icon" href="https://hyperdev.com/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <h1>ToDo List</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrapper todo-wrapper">
+        
+        <div class="todo-input todo-div">
+          <input id="addTodoTextInput" type="text" placeholder="What needs to be done?">
+          <button onclick="handlers.addTodo()">Add</button>
+        </div>
+
+        <div class="todo-change todo-div">
+          <input id="changeTodoPositionInput" type="number" placeholder="Todo Num">
+          <input id="changeTodoTextInput" type="text" placeholder="Modify a todo">
+          <button onclick="handlers.changeTodo()">Change Todo</button>
+        </div>
+
+        <div class="todo-toggle-completed todo-div">
+            <input id="toggleCompletedPositionInput" type="number" placeholder="Todo Num">
+            <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+            <button onclick="handlers.toggleAll()">Toggle All</button>
+        </div>
+
+        <div class="todo-list">
+          <ul>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script src="client.js"></script>
+  </body>
+</html>
